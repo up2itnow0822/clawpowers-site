@@ -10,15 +10,15 @@ const nav = [
 
 function Header() {
   return (
-    <header className="sticky top-0 z-20 border-b border-black/5 bg-white/85 backdrop-blur">
+    <header className="nav-glass sticky top-0 z-20">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold text-slate-900">ClawPowers</Link>
+        <Link href="/" className="text-lg font-semibold text-white">ClawPowers</Link>
         <nav className="hidden gap-6 md:flex">
           {nav.map(([label, href]) => (
-            <Link key={href} href={href} className="text-sm text-slate-600 transition hover:text-slate-900">{label}</Link>
+            <Link key={href} href={href} className="text-sm text-[#8899bb] transition hover:text-white">{label}</Link>
           ))}
         </nav>
-        <a href="https://github.com/up2itnow0822/ClawPowers-Skills" className="rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">View on GitHub</a>
+        <a href="https://github.com/up2itnow0822/ClawPowers-Skills" className="btn-secondary text-sm">View on GitHub</a>
       </div>
     </header>
   );
@@ -26,9 +26,9 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t border-black/5 bg-white/80">
-      <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-slate-500">
-        <div className="mb-2 font-medium text-slate-700">ClawPowers</div>
+    <footer className="border-t border-[rgba(255,255,255,0.05)] bg-[#050818]">
+      <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-[#8899bb]">
+        <div className="mb-2 font-medium text-white">ClawPowers</div>
         <div>Capability layer for autonomous agents. Product site for the ClawPowers library and ClawPowers Agent runtime.</div>
       </div>
     </footer>
@@ -37,12 +37,12 @@ function Footer() {
 
 export function SiteShell({ title, eyebrow, children }: { title: string; eyebrow: string; children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbff_0%,#f3f7ff_35%,#ffffff_100%)] text-slate-900">
+    <div className="hero-bg min-h-screen text-[#f0f4ff]">
       <Header />
-      <main className="mx-auto max-w-6xl px-6 py-12">
+      <main className="mx-auto max-w-6xl px-6 py-12 relative z-10">
         <div className="mb-10">
-          <div className="mb-3 inline-flex rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">{eyebrow}</div>
-          <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 md:text-5xl">{title}</h1>
+          <div className="badge mb-3">{eyebrow}</div>
+          <h1 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-5xl">{title}</h1>
         </div>
         {children}
       </main>
@@ -52,5 +52,5 @@ export function SiteShell({ title, eyebrow, children }: { title: string; eyebrow
 }
 
 export function Card({ children }: { children: React.ReactNode }) {
-  return <div className="rounded-3xl border border-black/5 bg-white p-6 shadow-[0_8px_30px_rgba(15,23,42,0.06)]">{children}</div>;
+  return <div className="card p-6">{children}</div>;
 }
