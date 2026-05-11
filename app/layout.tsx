@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "ClawPowers",
-  description: "ClawPowers gives AI agents real capabilities: payments, memory, RSI, wallets, swarm coordination, and skill execution.",
+  description: "ClawPowers soft-launch preview: pinned payments, memory, RSI, wallet helpers, swarm coordination, and skill execution for agent builders.",
   metadataBase: new URL("https://clawpowers.ai"),
   openGraph: {
     title: "ClawPowers",
-    description: "Payments, memory, RSI, wallets, swarm coordination, and skill execution in one launch-ready capability layer.",
+    description: "Pinned soft-launch preview for payments, memory, RSI, wallet helpers, swarm coordination, and skill execution.",
     url: "https://clawpowers.ai",
     siteName: "ClawPowers",
     type: "website",

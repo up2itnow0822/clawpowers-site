@@ -15,7 +15,7 @@ export default function HomePage() {
     <SiteShell eyebrow="clawpowers.ai" title="ClawPowers gives AI agents real capabilities.">
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <Card>
-          <p className="mb-5 max-w-2xl text-lg text-[#8899bb]">Payments, memory, RSI, wallets, swarm coordination, and skill execution in one launch-ready capability layer.</p>
+          <p className="mb-5 max-w-2xl text-lg text-[#8899bb]">A pinned soft-launch preview for payments, memory, RSI, wallet helpers, swarm coordination, and skill execution.</p>
           <div className="mb-6 flex flex-wrap gap-3">
             <Link href="/docs" className="btn-primary">Get Started</Link>
             <a href="https://github.com/up2itnow0822/ClawPowers-Skills" className="btn-secondary">View on GitHub</a>
@@ -42,7 +42,7 @@ clawpowers init`}</code></pre>
       </section>
 
       <section className="mt-10 grid gap-4 md:grid-cols-3">
-        {["npm: clawpowers", "npm: clawpowers-agent CLI", "x402 ready", "memory included", "RSI capable", "multi-runtime compatible"].map((item) => (
+        {["npm: clawpowers", "npm: clawpowers-agent CLI", "OpenClaw 2026.4.14", "Node 22+", "Hermes top-level skills", "preview-ready"].map((item) => (
           <div key={item} className="badge justify-center">{item}</div>
         ))}
       </section>
@@ -69,7 +69,7 @@ clawpowers init`}</code></pre>
         </Card>
         <Card>
           <div className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#00d4ff]">Frameworks</div>
-          <h2 className="mb-3 text-2xl font-semibold text-white">Use ClawPowers inside the tools you already ship with.</h2>
+          <h2 className="mb-3 text-2xl font-semibold text-white">Use ClawPowers where compatibility is explicitly pinned or documented.</h2>
           <div className="grid gap-3 text-sm text-[#8899bb] sm:grid-cols-2">
             {['OpenClaw','Claude Code','Cursor','Codex','ElizaOS','LangChain / LangGraph'].map((fw) => <div key={fw} className="card p-4 hover:border-[#00d4ff]/30 transition-colors">{fw}</div>)}
           </div>
