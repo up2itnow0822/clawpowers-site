@@ -22,7 +22,7 @@ export default function HomePage() {
           </div>
           <div className="code-block p-4 shadow-inner">
             <div className="mb-2 text-[#8899bb] text-sm">Install the CLI runtime</div>
-            <pre className="whitespace-pre-wrap text-[#00d4ff]"><code>{`npm install -g openclaw@2026.4.14 clawpowers-agent
+            <pre className="whitespace-pre-wrap text-[#00d4ff]"><code>{`npm install -g openclaw@2026.5.7 clawpowers-agent
 clawpowers init`}</code></pre>
           </div>
         </Card>
@@ -42,7 +42,7 @@ clawpowers init`}</code></pre>
       </section>
 
       <section className="mt-10 grid gap-4 md:grid-cols-3">
-        {["npm: clawpowers", "npm: clawpowers-agent CLI", "OpenClaw 2026.4.14", "Node 22+", "Hermes top-level skills", "preview-ready"].map((item) => (
+        {["npm: clawpowers", "npm: clawpowers-agent CLI", "OpenClaw 2026.5.7", "Node 22+", "Hermes top-level skills", "preview-ready"].map((item) => (
           <div key={item} className="badge justify-center">{item}</div>
         ))}
       </section>
@@ -78,3 +78,4 @@ clawpowers init`}</code></pre>
     </SiteShell>
   );
 }
+
