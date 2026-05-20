@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Card, SiteShell } from "./components";
 
 const features = [
@@ -9,6 +8,13 @@ const features = [
   ["Skills", "Package reusable execution capabilities, not just prompt fragments."],
   ["Swarm", "Coordinate parallel agents with clearer task boundaries and shared outcomes."],
 ];
+
+const demoSteps = [
+  ["Install", "66.5s", "npm install openclaw@2026.5.7 clawpowers-agent@latest --save-exact"],
+  ["Version", "1.0s", "npx clawpowers --version -> 1.1.12"],
+  ["Init", "17.0s", "npx clawpowers init -> config, gateway config, skill sync, plugin link"],
+  ["Status", "2.9s", "npx clawpowers status -> idle, @dev, 1 skill discovered, human-first payments"],
+] as const;
 
 export default function HomePage() {
   return (
@@ -70,13 +76,21 @@ clawpowers`}</code></pre>
 
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
         <Card>
-          <div className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#00d4ff]">60-second setup demo</div>
-          <h2 className="mb-3 text-2xl font-semibold text-white">Install the runtime, initialize ClawPowers, then run the first task.</h2>
-          <p className="mb-5 text-[#8899bb]">The launch path uses <code>clawpowers-agent</code> for the CLI and pulls the shared <code>clawpowers</code> capability library automatically. OpenClaw stays stock and pinned to the supported release.</p>
-          <div className="grid gap-3 text-sm text-white md:grid-cols-3">
-            <div className="code-block p-4">1. Install OpenClaw + agent</div>
-            <div className="code-block p-4">2. Run <code>clawpowers init</code></div>
-            <div className="code-block p-4">3. Run first task</div>
+          <div className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#00d4ff]">Install/init proof</div>
+          <h2 className="mb-3 text-2xl font-semibold text-white">Clean npm install to verified ClawPowers status in one cold run.</h2>
+          <p className="mb-5 text-[#8899bb]">The launch path was verified from a clean temporary project with public npm packages only. OpenClaw stays stock and pinned to the supported release.</p>
+          <div className="space-y-3 text-sm">
+            {demoSteps.map(([label, time, detail]) => (
+              <div key={label} className="code-block grid gap-3 p-4 text-[#c8d4f2] sm:grid-cols-[6rem_4rem_1fr]">
+                <div className="font-semibold text-white">{label}</div>
+                <div className="text-[#00d4ff]">{time}</div>
+                <div>{detail}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <a href="/demo/clawpowers-install-init-proof.txt" className="btn-secondary">Open proof transcript</a>
+            <span className="text-sm text-[#8899bb]">Cold-path validation: about 88 seconds, 0 npm vulnerabilities.</span>
           </div>
         </Card>
         <Card>

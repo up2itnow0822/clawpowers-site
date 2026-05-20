@@ -1,0 +1,62 @@
+ClawPowers install/init proof
+Generated: 2026-05-19 America/Chicago
+
+Environment:
+- Clean temporary npm project
+- Node/npm runtime from the release host
+- Packages: openclaw@2026.5.7, clawpowers-agent@latest
+
+Command:
+npm install openclaw@2026.5.7 clawpowers-agent@latest --save-exact --ignore-scripts
+
+Result:
+- Exit code: 0
+- Duration: 66.5 seconds
+- Installed 553 packages
+- npm audit result: 0 vulnerabilities
+
+Command:
+npx clawpowers --version
+
+Result:
+- Exit code: 0
+- Duration: 1.0 seconds
+- Output: 1.1.12
+
+Command:
+npx clawpowers init
+
+Result:
+- Exit code: 0
+- Duration: 17.0 seconds
+- Config written
+- Gateway config written
+- Synced 1 ClawPowers skill
+- OpenClaw plugin installed/linked
+- CLI output ended with: Done! Run `clawpowers status` to verify.
+
+Command:
+npx clawpowers status
+
+Result:
+- Exit code: 0
+- Duration: 2.9 seconds
+- Status: idle
+- Profile: @dev
+- Skills: 1 discovered
+- Gateway: not running
+- RSI enabled
+- Payments mode: human-first
+- Daily payment limit: $25
+
+Command:
+npx clawpowers --help
+
+Result:
+- Exit code: 0
+- Duration: 0.9 seconds
+- Commands listed: run, status, init, config, skills, payments, rsi, resume, help
+
+Notes:
+- This proof uses the public npm package path and does not require private repository state.
+- The full cold-path validation completed in roughly 88 seconds. Warm npm cache runs may be faster.
