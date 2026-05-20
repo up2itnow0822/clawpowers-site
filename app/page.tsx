@@ -12,18 +12,20 @@ const features = [
 
 export default function HomePage() {
   return (
-    <SiteShell eyebrow="clawpowers.ai" title="ClawPowers gives AI agents real capabilities.">
+    <SiteShell eyebrow="clawpowers.ai" title="Ship AI agents with payments, memory, wallets, skills, and self-improvement loops without building the agent runtime from scratch.">
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <Card>
-          <p className="mb-5 max-w-2xl text-lg text-[#8899bb]">A pinned soft-launch preview for payments, memory, RSI, wallet helpers, swarm coordination, and skill execution.</p>
+          <p className="mb-5 max-w-2xl text-lg text-[#8899bb]">ClawPowers is the capability layer for OpenClaw-compatible agents: install the CLI, initialize a project, and add production-grade powers behind explicit approval and spend controls.</p>
           <div className="mb-6 flex flex-wrap gap-3">
-            <Link href="/docs" className="btn-primary">Get Started</Link>
+            <a href="#install" className="btn-primary">Install ClawPowers</a>
             <a href="https://github.com/up2itnow0822/ClawPowers-Skills" className="btn-secondary">View on GitHub</a>
           </div>
-          <div className="code-block p-4 shadow-inner">
+          <div id="install" className="code-block p-4 shadow-inner">
             <div className="mb-2 text-[#8899bb] text-sm">Install the CLI runtime</div>
             <pre className="whitespace-pre-wrap text-[#00d4ff]"><code>{`npm install -g openclaw@2026.5.7 clawpowers-agent
-clawpowers init`}</code></pre>
+clawpowers init
+clawpowers`}</code></pre>
+            <div className="mt-3 text-sm text-[#8899bb]">Pinned to OpenClaw 2026.5.7 · Node 22+ · soft-launch preview · explicit wallet approvals</div>
           </div>
         </Card>
         <Card>
@@ -46,6 +48,16 @@ clawpowers init`}</code></pre>
           <div key={item} className="badge justify-center">{item}</div>
         ))}
       </section>
+
+      <section className="stats-bar mt-10 grid gap-4 py-5 text-sm text-[#c8d4f2] md:grid-cols-5">
+        <div><span className="font-semibold text-white">Payments:</span> x402 workflow handling with policy controls</div>
+        <div><span className="font-semibold text-white">Memory:</span> persistent agent context instead of repeated setup</div>
+        <div><span className="font-semibold text-white">RSI:</span> outcome-tracked mutation loops for safe improvement experiments</div>
+        <div><span className="font-semibold text-white">Wallets:</span> helper flows gated by explicit spend limits and approvals</div>
+        <div><span className="font-semibold text-white">Swarm:</span> parallel agents with clearer boundaries and shared outcomes</div>
+      </section>
+
+      <p className="mt-6 max-w-3xl text-[#8899bb]">Built for builders who want reusable agent powers now, while keeping OpenClaw stock, pinned, and auditable.</p>
 
       <section className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {features.map(([title, desc]) => (
