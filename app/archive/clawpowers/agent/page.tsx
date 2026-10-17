@@ -28,7 +28,7 @@ export default function Page() {
             If you are evaluating ClawPowers for a soft launch, demos, or fast operator workflows, the agent runtime is usually the fastest way to get to visible results.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/docs" className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700">Read Docs</Link>
+            <Link href="/archive/clawpowers/docs" className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700">Read Docs</Link>
             <a href="https://github.com/up2itnow0822/clawpowers-agent" className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 hover:border-slate-300">View Repo</a>
           </div>
         </Card>

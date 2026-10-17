@@ -11,6 +11,13 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
+  if (host === "www.ai-agent-economy.com") {
+    const url = request.nextUrl.clone();
+    url.host = "ai-agent-economy.com";
+    url.protocol = "https:";
+    return NextResponse.redirect(url, 308);
+  }
+
   return NextResponse.next();
 }
 
