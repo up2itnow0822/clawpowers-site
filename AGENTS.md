@@ -5,8 +5,9 @@ This is the AI Agent Economy LLC marketing site on Next.js 16 (App Router) + Tai
 ## Current product surface
 
 - Public home (`app/page.tsx`) is the AI Agent Economy site, not ClawPowers.
-- Live holding-page copy from https://www.ai-agent-economy.com is carried below the hero: tagline, rebuild status, and the `/Agent-native` `/Protocol-first` `/Borderless finance` `/Future-proof` chips.
-- Brand assets live in `public/brand/` (app icon, hero banner PNG + WebP) with `app/icon.png` / `public/favicon.png` for the tab icon.
+- Live holding page from https://www.ai-agent-economy.com is recreated below the hero in the same order: framed banner, tagline, rebuild status with amber pulse, then the `/Agent-native` `/Protocol-first` `/Borderless finance` `/Future-proof` chips. Do not add invented marketing sections on `/`.
+- Live production is one HTML document. Paths like `/about` 200 because they serve that same file, not because they are distinct routes — do not invent extra public pages.
+- Brand assets live in `public/brand/` (app icon, hero banner PNG + WebP). The live holding banner JPEGs are in `public/brand/live/`. Tab icons are `app/icon.png` / `public/favicon.png`.
 
 ## Hero contract
 

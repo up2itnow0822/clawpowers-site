@@ -30,6 +30,8 @@ for (const rel of [
   "public/brand/hero-banner.webp",
   "public/brand/hero-city.webp",
   "public/brand/hero-water.webp",
+  "public/brand/live/banner.jpg",
+  "public/brand/live/banner-830.jpg",
   "public/og.jpg",
   "app/archive/clawpowers/page.tsx",
   "app/archive/clawpowers/docs/page.tsx",
@@ -45,12 +47,19 @@ for (const rel of [
 for (const [label, haystack, needle] of [
   ["homepage title lockup", hero, "AI AGENT"],
   ["homepage company line", hero, "ECONOMY LLC"],
+  ["live framed banner", homepage, "/brand/live/banner.jpg"],
+  ["live banner srcset", homepage, "/brand/live/banner-830.jpg 830w, /brand/live/banner.jpg 1660w"],
   ["live tagline", homepage, "Building the financial rails for the agentic economy."],
   ["rebuild status", homepage, "We&apos;re rebuilding this site. More coming soon."],
   ["live trait Agent-native", homepage, "Agent-native"],
   ["live trait Protocol-first", homepage, "Protocol-first"],
   ["live trait Borderless finance", homepage, "Borderless finance"],
   ["live trait Future-proof", homepage, "Future-proof"],
+  ["live banner frame", css, ".aae-banner"],
+  ["live holding main", css, ".aae-live"],
+  ["header wordmark", chrome, "AI Agent Economy LLC"],
+  ["footer copyright", chrome, "© 2026 AI Agent Economy LLC"],
+  ["footer domain as text", chrome, ">ai-agent-economy.com</span>"],
   ["archive link", chrome, "/archive/clawpowers"],
   ["layout title", layout, "AI Agent Economy LLC"],
   ["layout canonical", layout, "https://ai-agent-economy.com"],
@@ -68,6 +77,15 @@ for (const [label, haystack, needle] of [
   if (!haystack.includes(needle)) failures.push(`expected ${label} to include ${JSON.stringify(needle)}`);
 }
 
+for (const [label, haystack, needle] of [
+  ["invented Live holding signals", homepage, "Live holding signals"],
+  ["invented Key traits", homepage, "Key traits"],
+  ["invented trait cards", homepage, "aae-card"],
+  ["invented trait grid", homepage, "brandTraits"],
+]) {
+  if (haystack.includes(needle)) failures.push(`homepage should not include ${label} (${JSON.stringify(needle)})`);
+}
+
 if (/<title>\s*ClawPowers/i.test(layout) || layout.includes('title: "ClawPowers"')) {
   failures.push("root layout still titles the site ClawPowers");
 }
@@ -77,4 +95,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log("aae surfaces OK: brand lockup, live copy, archive, favicon, fonts");
+console.log("aae surfaces OK: brand lockup, live holding page, archive, favicon, fonts");

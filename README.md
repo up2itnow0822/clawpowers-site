@@ -6,7 +6,8 @@ This repository previously launched ClawPowers. ClawPowers is paused. The home p
 
 ## Routes
 
-- `/` — AI Agent Economy cinematic hero plus live holding-page copy
+- `/` — AI Agent Economy cinematic hero plus the live holding page (framed banner, tagline, rebuild status, four chips)
+- Live production is a single HTML document. Extra paths on https://www.ai-agent-economy.com return that same homepage, so this repo does not invent extra public routes.
 - `/archive/clawpowers` — archived ClawPowers home
 - `/archive/clawpowers/agent`
 - `/archive/clawpowers/docs`
