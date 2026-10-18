@@ -1,13 +1,16 @@
 {
   "name": "clawpowers-site",
   "version": "1.0.0",
-  "description": "Marketing site scaffold for ClawPowers on clawpowers.ai",
+  "description": "AI Agent Economy LLC marketing site. ClawPowers pages are preserved under /archive/clawpowers.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check:release-surfaces": "node scripts/check-release-surfaces.mjs"
+    "lint": "tsc --noEmit",
+    "test": "npm run check:release-surfaces && npm run check:aae-surfaces",
+    "check:release-surfaces": "node scripts/check-release-surfaces.mjs",
+    "check:aae-surfaces": "node scripts/check-aae-surfaces.mjs"
   },
   "keywords": [],
   "author": "",

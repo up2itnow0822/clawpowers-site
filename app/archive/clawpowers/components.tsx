@@ -1,18 +1,18 @@
 import Link from "next/link";
 
 const nav = [
-  ["Docs", "/docs"],
-  ["Examples", "/examples"],
-  ["Frameworks", "/frameworks"],
-  ["Agent", "/agent"],
-  ["FAQ", "/faq"],
+  ["Docs", "/archive/clawpowers/docs"],
+  ["Examples", "/archive/clawpowers/examples"],
+  ["Frameworks", "/archive/clawpowers/frameworks"],
+  ["Agent", "/archive/clawpowers/agent"],
+  ["FAQ", "/archive/clawpowers/faq"],
 ];
 
 function Header() {
   return (
     <header className="nav-glass sticky top-0 z-20">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold text-white">ClawPowers</Link>
+        <Link href="/archive/clawpowers" className="text-lg font-semibold text-white">ClawPowers</Link>
         <nav className="hidden gap-6 md:flex">
           {nav.map(([label, href]) => (
             <Link key={href} href={href} className="text-sm text-[#8899bb] transition hover:text-white">{label}</Link>
